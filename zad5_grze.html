@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Grzegorzak 2P</title>
+
+<script language="JavaScript">
+
+document.write("<span style='color:teal;font-size:1.5cm;font-family:Arial;'>Szkielet zaliczeniowy JavaScript, wykonał: Jan Grzegorzak 2P</span><br>");
+
+function WinOpen_z1()
+{
+
+window.open("zdjecie1.html","zdjecie1","toolbar=no,directories=no,menubar=no,height=380,width=160,top=20,left=20");
+}
+
+function WinOpen_z2()
+{
+window.open("zdjecie2.html","zdjecie2","toolbar=no,directories=no,menubar=no,height=380,width=160,top=20,left=1100");
+}
+
+function WinOpen_z3()
+{
+window.open("zdjecie3.html","zdjecie3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=500,left=20");
+}
+
+function WinOpen_z4()
+{
+window.open("zdjecie4.html","zdjecie4","toolbar=no,directories=no,menubar=no,height=380,width=160,top=500,left=1100");
+}
+
+function okno_zamknij()
+{
+window.close()
+}
+
+</script>
+</head>
+
+<body>
+
+<form>
+<input type="button" value="zdjecie1" onclick="WinOpen_z1()">
+<input type="button" value="zdjecie2" onclick="WinOpen_z2()">
+<input type="button" value="zdjecie3" onclick="WinOpen_z3()">
+<input type="button" value="zdjecie4" onclick="WinOpen_z4()">
+<input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</form>
+
+</body>
+</html>
