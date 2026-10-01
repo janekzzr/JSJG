@@ -1,0 +1,30 @@
+<textarea cols="90" rows="24"> 
+    <!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<body>
+<div style="color:green;font-size:50px;">
+<script language="JavaScript">
+    var D1_grz=prompt("Data1>Data 2 Data1=","");
+    var G1_grz=prompt("Godzina1>Godzina2 Godzina1=","");
+    var D2_grz=prompt("Data1>Data2 Data2=","");
+    var G2_grz=prompt("Godzina1>Godzina2 Godzina2=","");
+    var sekund_grz;
+    var a=parseFloat(D1_grz);
+    var b=parseFloat(D2_grz);
+    var c=parseFloat(G1_grz);
+    var d=parseFloat(G2_grz);
+    sekund_grz=((a-b)*24+c-d)*3600;
+    document.write("Ilość sekund między dniami "+a+" i "+b+" = "+sekund_grz+" s"+"<br>");
+</script>
+</div>
+
+
+
+
+</body>
+</html>
+</textarea>
