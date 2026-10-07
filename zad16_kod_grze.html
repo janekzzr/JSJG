@@ -1,23 +1,26 @@
 <textarea cols="90" rows="24"> 
-    <hmtl>
+<html>
 <head>
     <title>Zadanie 16 - Grzegorzak</title>
     <meta charset="UTF-8">
 </head>
 <body>
-<div style="color:red;font-size:20px;">
+<div style="color:red;font-size:30px;">
 <script language="JavaScript">
-var liczba1=prompt("A=","");
+var liczba1=prompt("Podaj pierwszą liczbę A=","");
 var A_grze=parseFloat(liczba1);
-var liczba2=prompt("B=","");
+var liczba2=prompt("Podaj drugą liczbę B=","");
 var B_grze=parseFloat(liczba2);
-document.write("A="+A_grze+" "+"B="+B_grze);
-document.write("("+A_grze+"+"+B_grze+")^3="+(A_grze+B_grze)*(A_grze+B_grze)*(A_grze+B_grze)+"<br>");
 
+document.write("wczytane liczby: A="+A_grze+" B="+B_grze+"<br>");
 
+document.write("("+A_grze+" + "+B_grze+")^3 = "+A_grze+"^3 + 3*("+A_grze+"^2)*("+B_grze+") + 3*("+A_grze+")*(("+B_grze+")^2) + "+B_grze+"^3 = "+(A_grze*A_grze*A_grze)+" + "+(3*A_grze*A_grze*B_grze)+" + "+(3*A_grze*B_grze*B_grze)+" + "+(B_grze*B_grze*B_grze)+" = "+((A_grze+B_grze)*(A_grze+B_grze)*(A_grze+B_grze)));
 
 </script>
 </div>
+<input type="button" value="zamknij okno" onclick="window.close()" />
 </body>
-</hmtl>
+</html>
+
 </textarea>
+<input type="button" value="zamknij okno" onclick="window.close()" />
