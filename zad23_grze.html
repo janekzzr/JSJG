@@ -1,0 +1,51 @@
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Zadanie 23 - Drabina</title>
+  <script type="text/javascript">
+   function pobierzLiczbe(id) {
+    return parseFloat(document.getElementById(id).value.replace(",", "."));
+   }
+
+   function dlugoscDrabiny_Grzegorzak(D, X) {
+    return Math.sqrt(Math.pow(D, 2) + Math.pow(X, 2));
+   }
+
+   function katNachylenia_Grzegorzak(D, X) {
+    return (Math.atan(D / X) * 180 / Math.PI);
+   }
+
+   function oblicz_Grzegorzak() {
+    var D = pobierzLiczbe('D');
+    var X = pobierzLiczbe('X');
+
+    if (isNaN(D) || isNaN(X) || D < 0 || X <= 0) {
+     document.getElementById('wynik').innerHTML = "Wprowadź poprawne wartości: D >= 0, X > 0.";
+     return;
+    }
+
+    var drabina = dlugoscDrabiny_Grzegorzak(D, X);
+    var alfa = katNachylenia_Grzegorzak(D, X);
+
+    document.getElementById('Drabina').innerHTML =
+     "Drabina: " + drabina.toFixed(2) + " m<br>" +
+
+    document.getElementById('Alfa').innerHTML 
+     "Alfa: " + alfa.toFixed(2) + "°";
+   }
+
+   
+  </script>
+ </head>
+ <body>
+  <h1>Obliczanie odległości drabiny i kąta</h1>
+  <form>
+   <p>D - wysokość oparcia drabiny: <input type="text" id="D"></p>
+   <p>X - odległość oparcia drabiny: <input type="text" id="X" ></p>
+   <input type="button" value="Oblicz" onclick="oblicz_Grzegorzak()">
+   <input type="button" value="zamknij okno" onclick="window.close()">
+  </form>
+<p>Drabina= <input type="text" id="Drabina"></p>
+<p>Alfa= <input type="text" id="Alfa"></p>
+ </body>
+</html>
