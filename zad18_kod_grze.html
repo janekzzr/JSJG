@@ -1,0 +1,39 @@
+<textarea cols="120" rows="60"> 
+    <!DOCTYPE html>
+ <head>
+ <title> Użycie fukcji </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+ <div style="color:navy;font-size:50px;">
+ <script language="JavaScript">
+ var a=parseFloat(prompt("a=",""));
+ var b=parseFloat(prompt("b=",""));
+ function suma_grz(a, b) {
+ return a + b;
+ }
+function odejmowanie_grz(a, b) {
+    return a - b;
+}
+function mnozenie_grz(a, b) {
+    return a * b;
+}
+function do_kwadratu_grz(a,b) {
+    return a * a;
+    return b * b;
+}
+function  reszta_z_dzielenia_a_przez_b_grz(a,b) {
+    return a % b;
+}
+
+ document.write("suma="+suma_grz(a,b)+"<br>");
+ document.write("odejmowanie="+odejmowanie_grz(a,b)+"<br>");
+ document.write("mnożenie="+mnozenie_grz(a,b)+"<br>");
+ document.write("kwadrat a="+do_kwadratu_grz(a,b)+"<br>");
+ document.write("kwadrat b="+do_kwadratu_grz(a,b)+"<br>");
+ document.write("reszta z dzielenia a przez b="+reszta_z_dzielenia_a_przez_b_grz(a,b)+"<br>");
+</script>
+</div>
+</body>
+</html>
+</textarea>

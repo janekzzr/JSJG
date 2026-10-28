@@ -1,51 +1,61 @@
+
 <html>
- <head>
-  <meta charset="UTF-8">
-  <title>Zadanie 23 - Drabina</title>
-  <script type="text/javascript">
-   function pobierzLiczbe(id) {
-    return parseFloat(document.getElementById(id).value.replace(",", "."));
-   }
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 23 - Drabina</title>
 
-   function dlugoscDrabiny_Grzegorzak(D, X) {
-    return Math.sqrt(Math.pow(D, 2) + Math.pow(X, 2));
-   }
+    <script type="text/javascript">
 
-   function katNachylenia_Grzegorzak(D, X) {
-    return (Math.atan(D / X) * 180 / Math.PI);
-   }
+        function pobierzLiczbe(id) {
+            return parseFloat(document.getElementById(id).value.replace(",", "."));
+        }
 
-   function oblicz_Grzegorzak() {
-    var D = pobierzLiczbe('D');
-    var X = pobierzLiczbe('X');
+        function dlugoscDrabiny_Grzegorzak(D, X) {
+            return Math.sqrt(Math.pow(D, 2) + Math.pow(X, 2));
+        }
 
-    if (isNaN(D) || isNaN(X) || D < 0 || X <= 0) {
-     document.getElementById('wynik').innerHTML = "Wprowadź poprawne wartości: D >= 0, X > 0.";
-     return;
-    }
+        function katNachylenia_Grzegorzak(D, X) {
+            return Math.atan(D / X) * 180 / Math.PI;
+        }
 
-    var drabina = dlugoscDrabiny_Grzegorzak(D, X);
-    var alfa = katNachylenia_Grzegorzak(D, X);
+        function oblicz_Grzegorzak() {
+            var D = pobierzLiczbe('D');
+            var X = pobierzLiczbe('X');
 
-    document.getElementById('Drabina').innerHTML =
-     "Drabina: " + drabina.toFixed(2) + " m<br>" +
+            if (isNaN(D) || isNaN(X) || D < 0 || X <= 0) {
+                alert("Wprowadź poprawne wartości: D >= 0, X > 0.");
+                return;
+            }
 
-    document.getElementById('Alfa').innerHTML 
-     "Alfa: " + alfa.toFixed(2) + "°";
-   }
+            var drabina = dlugoscDrabiny_Grzegorzak(D, X);
+            var alfa = katNachylenia_Grzegorzak(D, X);
 
-   
-  </script>
- </head>
- <body>
-  <h1>Obliczanie odległości drabiny i kąta</h1>
-  <form>
-   <p>D - wysokość oparcia drabiny: <input type="text" id="D"></p>
-   <p>X - odległość oparcia drabiny: <input type="text" id="X" ></p>
-   <input type="button" value="Oblicz" onclick="oblicz_Grzegorzak()">
-   <input type="button" value="zamknij okno" onclick="window.close()">
-  </form>
-<p>Drabina= <input type="text" id="Drabina"></p>
-<p>Alfa= <input type="text" id="Alfa"></p>
- </body>
+            document.getElementById('Drabina').value = drabina.toFixed(2) + " m";
+            document.getElementById('Alfa').value = alfa.toFixed(2) + "°";
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Obliczanie długości drabiny i kąta</h1>
+
+    <form>
+        <p>D - wysokość oparcia drabiny:
+            <input type="text" id="D">
+        </p>
+
+        <p>X - odległość oparcia drabiny:
+            <input type="text" id="X">
+        </p>
+
+        <input type="button" value="Oblicz" onclick="oblicz_Grzegorzak()">
+
+        <input type="button" value="Zamknij okno" onclick="window.close()">
+    </form>
+
+    <p>Drabina = <input type="text" id="Drabina" readonly></p>
+    <p>Alfa = <input type="text" id="Alfa" readonly></p>
+
+</body>
 </html>

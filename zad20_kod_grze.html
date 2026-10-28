@@ -1,0 +1,60 @@
+<textarea cols="120" rows="60"> 
+    
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zad 20</title>
+</head>
+<body>
+
+
+
+<p>Punkt A</p>
+xA: <input type="number" id="xa_grz">
+yA: <input type="number" id="ya_grz">
+
+<p>Punkt B</p>
+xB: <input type="number" id="xb_grz">
+yB: <input type="number" id="yb_grz">
+
+<p>Punkt C</p>
+xC: <input type="number" id="xc_grz">
+yC: <input type="number" id="yc_grz">
+
+<br><br>
+
+<button onclick="AB_grz()">Oblicz długości boków</button>
+
+<p id="wynik"></p>
+
+<script>
+
+function AB_grz()
+{
+    var xa_grz = parseFloat(document.getElementById("xa_grz").value);
+    var ya_grz = parseFloat(document.getElementById("ya_grz").value);
+
+    var xb_grz = parseFloat(document.getElementById("xb_grz").value);
+    var yb_grz = parseFloat(document.getElementById("yb_grz").value);
+
+    var xc_grz = parseFloat(document.getElementById("xc_grz").value);
+    var yc_grz = parseFloat(document.getElementById("yc_grz").value);
+
+    var AB = Math.sqrt((xb_grz-xa_grz)*(xb_grz-xa_grz) + (yb_grz-ya_grz)*(yb_grz-ya_grz));
+
+    var BC = Math.sqrt((xc_grz-xb_grz)*(xc_grz-xb_grz) + (yc_grz-yb_grz)*(yc_grz-yb_grz));
+
+    var AC = Math.sqrt((xc_grz-xa_grz)*(xc_grz-xa_grz) + (yc_grz-ya_grz)*(yc_grz-ya_grz));
+
+    document.getElementById("wynik").innerHTML =
+        "Długość boku AB = " + AB.toFixed(2) + "<br>" +
+        "Długość boku BC = " + BC.toFixed(2) + "<br>" +
+        "Długość boku AC = " + AC.toFixed(2);
+}
+
+</script>
+
+</body>
+</html>
+</textarea>

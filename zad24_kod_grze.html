@@ -1,0 +1,34 @@
+<textarea cols="120" rows="60">
+    <!DOCTYPE html>   
+<head>    
+<title> proste obliczenia</title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:red;font-size:40px;"> 
+<script language="JavaScript"> 
+var x1_grz=prompt("x1=",""); 
+var x2_grz=prompt("x2=",""); 
+var a=parseFloat(x1_grz); 
+var b=parseFloat(x2_grz); 
+var x1_grz_rad=(Math.PI*x1_grz)/180;
+var x2_grz_rad=(Math.PI*x2_grz)/180;    
+var y1_grz=3*Math.pow(x1_grz,(3/5));
+var y2_grz=2*Math.cos(x1_grz_rad)+3*Math.sin(x1_grz_rad);
+var y3_grz=Math.pow(Math.pow(x1_grz,5)+2*Math.pow(x2_grz,4),(1/3))*Math.abs(x1_grz-x2_grz);
+
+
+
+document.write("x1_grz="+x1_grz+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x2_grz="+x2_grz+"<br>"); 
+document.write("x1_grz="+x1_grz+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x1_grz="+x1_grz_rad.toFixed(2)+"<br>"); 
+document.write("y1_grz="+y1_grz.toFixed(2)+"<br>");
+document.write("y2_grz="+y2_grz.toFixed(2)+"<br>");
+document.write("y3_grz="+y3_grz.toFixed(2)+"<br>");
+
+
+</script> 
+</div> 
+<input type="button" value="zamknij okno" onclick="window.close()" />
+</body> 
+</html>
+</textarea>

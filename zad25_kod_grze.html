@@ -1,0 +1,66 @@
+<textarea cols="120" rows="60">
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Grzegorzak 1P - Zadanie 25</title>
+
+    <script type="text/javascript">
+
+        // Autor: Jan Grzegorzak 1P
+
+        function oblicz_grz()
+        {
+            var No_grz = parseFloat(document.getElementById("No_grz").value);
+            var t_grz = parseFloat(document.getElementById("t_grz").value);
+            var T_grz = parseFloat(document.getElementById("T_grz").value);
+
+            if (isNaN(No_grz) || isNaN(t_grz) || isNaN(T_grz) ||
+                No_grz < 0 || t_grz < 0 || T_grz <= 0)
+            {
+                alert("Podaj poprawne dane!");
+                return;
+            }
+
+            var lambda_grz = Math.log(2) / T_grz;
+            var N_grz = No_grz * Math.pow(Math.E, -lambda_grz * t_grz);
+
+            document.getElementById("wynik").innerHTML =
+                "No=" + No_grz.toFixed(0) + "[sztuk]<br>" +
+                "t=" + t_grz.toFixed(0) + "[lat]<br>" +
+                "T1/2=" + T_grz.toFixed(0) + "[lat]<br>" +
+                "Lambda=" + lambda_grz.toFixed(7) + "[1/rok]<br>" +
+                "N=" + N_grz.toFixed(7) + "[sztuk]";
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Wszystko o rozpadzie promieniotwórczym</h1>
+
+    <p>No - początkowa liczba atomów [sztuk]:
+        <input type="number" id="No_grz" >
+    </p>
+
+    <p>t - czas [lat]:
+        <input type="number" id="t_grz" >
+    </p>
+
+    <p>T1/2 - okres połowicznego rozpadu [lat]:
+        <input type="number" id="T_grz">
+    </p>
+
+    <input type="button" value="Oblicz" onclick="oblicz_grz()">
+
+    <br><br>
+
+    <div id="wynik" style="color:blue; font-size:30px; border:1px solid black; padding:10px; width:fit-content;">
+    </div>
+
+</body>
+</html>
+
+</textarea>
