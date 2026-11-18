@@ -1,0 +1,66 @@
+<textarea cols="120" rows="60"> 
+    
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 32 – Grzegorzak</title>
+</head>
+<body bgcolor="yellow">
+
+<div style="color:green;font-size:42px;">
+<script type="text/javascript">
+
+function ciezarowka(ladownosc_k, marka_k, model_k, kolor_k)
+{
+    this.ladownosc = ladownosc_k;
+    this.marka = marka_k;
+    this.model = model_k;
+    this.kolor = kolor_k;
+}
+
+ciezarowka.prototype.wypisz = function()
+{
+    alert(this.ladownosc + " " + this.marka + " " + this.model + " " + this.kolor);
+};
+
+var ciezarowka1 = new ciezarowka(1000, "MAN", "TGX", "czerwony");
+var ciezarowka2 = new ciezarowka(2000, "Volvo", "FH16", "bialy");
+var ciezarowka3 = new ciezarowka(1500, "Scania", "R500", "niebieski");
+
+ciezarowka1.wypisz();
+ciezarowka2.wypisz();
+ciezarowka3.wypisz();
+
+document.write("Moje nazwisko to GRZEGORZAK mam numer 2 a obiekt to ciezarowka"+"<br>");
+document.write("dostęp do pól ciezarowka1, ciezarowka2 i ciezarowka3"+"<br>");
+document.write("czyli wypisanie danych"+"<br>");
+
+document.write("ciezarowka pierwsza => "+ciezarowka1.ladownosc+" "+ciezarowka1.marka+" "+ciezarowka1.model+" "+ciezarowka1.kolor+"<br>");
+document.write("ciezarowka druga => "+ciezarowka2.ladownosc+" "+ciezarowka2.marka+" "+ciezarowka2.model+" "+ciezarowka2.kolor+"<br>");
+document.write("ciezarowka trzecia => "+ciezarowka3.ladownosc+" "+ciezarowka3.marka+" "+ciezarowka3.model+" "+ciezarowka3.kolor+"<br>");
+
+ciezarowka1.rok_produkcji = 2020;
+
+ciezarowka.prototype.ciezarowka_pokaz_grzegorzak = function()
+{
+    alert(this.rok_produkcji);
+};
+
+ciezarowka1.ciezarowka_pokaz_grzegorzak();
+
+</script>
+</div>
+
+<div style="color:blue;font-size:41px;"><br>
+programowanie obiektowe:<br>
+Słowo kluczowe prototype stosowane jest do:<br>
+dodawania metod do konstruktora.<br>
+Słowo kluczowe new stosowane jest do:<br>
+tworzenia nowych obiektów.
+</div>
+
+</body>
+</html>
+</textarea>
